@@ -1,0 +1,1 @@
+docker run --name order-service -p 8081:8080 lkusmierczyk/order-service:1.0-snap
