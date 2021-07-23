@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 public class OrderDTO {
     private Long id;
     private String customerCode;
+    private String customerName;
     private String orderNumber;
     private LocalDateTime orderDateTime;
 
@@ -12,11 +13,13 @@ public class OrderDTO {
 
     }
 
-    public OrderDTO(Long id, String customerCode, String orderNumber, LocalDateTime orderDateTime) {
+    public OrderDTO(Long id, String customerCode, String customerName, String orderNumber,
+                    LocalDateTime orderDateTime) {
         this.id = id;
-        this.setCustomerCode(customerCode);
-        this.setOrderNumber(orderNumber);
-        this.setOrderDateTime(orderDateTime);
+        this.customerCode = customerCode;
+        this.customerName = customerName;
+        this.orderNumber = orderNumber;
+        this.orderDateTime = orderDateTime;
     }
 
     public long getId() {
@@ -49,5 +52,13 @@ public class OrderDTO {
 
     public void setOrderDateTime(LocalDateTime orderDateTime) {
         this.orderDateTime = orderDateTime;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
     }
 }
