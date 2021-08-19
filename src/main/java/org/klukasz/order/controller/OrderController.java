@@ -24,6 +24,6 @@ public class OrderController {
 
     @GetMapping("test")
     public String test() {
-        return "hurrray";
+        return "canary release test";
     }
 }
