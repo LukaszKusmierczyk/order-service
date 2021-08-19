@@ -5,9 +5,6 @@ import org.klukasz.order.service.OrderService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -23,5 +20,10 @@ public class OrderController {
     @GetMapping
     public List<OrderDTO> getOrders() {
         return orderService.getOrders();
+    }
+
+    @GetMapping("test")
+    public String test() {
+        return "hurrray";
     }
 }
