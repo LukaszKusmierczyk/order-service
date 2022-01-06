@@ -20,13 +20,13 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 }
 
-apply from: "$rootDir/gradle/jacoco.gradle"
+//apply from: "$rootDir/gradle/jacoco.gradle"
 
 test {
     useJUnitPlatform()
     finalizedBy jacocoTestReport // report is always generated after tests run
 }
 
-jacocoTestReport {
-    dependsOn test // tests are required to run before generating the report
-}
+//jacocoTestReport {
+//    dependsOn test // tests are required to run before generating the report
+//}
