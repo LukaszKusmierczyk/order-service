@@ -15,11 +15,11 @@ pipeline {
                 sh './gradlew clean build'
             }
 
-            post {
-                always {
-                    junit 'build/test-results/test/*.xml'
-                }
-            }
+            //post {
+            //    always {
+            //        junit 'build/test-results/test/*.xml'
+            //    }
+            //}
         }
         stage('create docker image') {
             steps {
